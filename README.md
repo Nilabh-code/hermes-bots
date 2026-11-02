@@ -50,6 +50,25 @@ Every gate returns **exactly one token**, so "it looked fine" never counts as ap
 
 `APPROVE` · `APPROVE WITH CHANGES` · `REJECT` · `SHIP` · `FIX` · `ROLLBACK`
 
+### Gate hygiene — the prompt carries the discipline
+
+A gate is only as good as the instruction that opens it. This is the tested shape:
+
+```bash
+hermes -p reviewer chat -q "PRE-REVIEW MODE. Read <slug>/TASK.md and <slug>/PLAN.md. \
+Write <slug>/PRE-REVIEW.md within the first 5 minutes, then refine in place at most twice. \
+Do not install packages, create databases, or run the plan — review the paper; mark anything \
+unproven as (inferred). Attack it: full question battery, two alternatives per material \
+decision, size/quantity justification, fit, cost, failure modes, blast radius, reversibility, \
+and whether each acceptance test can actually fail. End with exactly one verdict token: \
+APPROVE | APPROVE WITH CHANGES | REJECT."
+```
+
+Two rules keep a gate from turning into a research project:
+
+- **Artifact first.** A written verdict at five minutes beats a perfect one that never lands. (Observed: an unbounded reviewer spent 9+ minutes building a scratch Postgres to test a plan's lock behaviour and never wrote the file.)
+- **Never run the plan to review it.** The moment a reviewer starts provisioning infrastructure to check a premise, it has become a co-author with no reviewer left in the room. One three-minute experiment, after the artifact exists, is the whole allowance.
+
 ## Install
 
 Requires Hermes Agent ≥ 0.22 and an already-configured default profile (that is where the API keys come from — **none are shipped here**).

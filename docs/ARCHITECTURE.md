@@ -44,6 +44,8 @@ Unbounded verification is just expensive stalling. Hard limits, written into the
 | Bound | Value | Why |
 |---|---|---|
 | Gate rounds | 2 per gate | a third round means the scope is wrong, not the wording |
+| Reviewer time-to-artifact | 5 minutes | a written verdict beats a perfect one that never lands; an unbounded reviewer once spent 9+ minutes provisioning a scratch database instead of writing PRE-REVIEW.md |
+| Reviewer PRE / POST wall clock | 12 / 15 minutes | depth is not duration |
 | Fix cycles after POST | 2 | after that the honest answer is "largest verified slice + what is broken" |
 | Dispatch attempts per step | 3 | distinguishes "flaky" from "cannot work" |
 | 3D visual iterations | 2 | a render is a perception check, not a design method; geometry checks settle ambiguity |
