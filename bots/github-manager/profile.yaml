@@ -1,0 +1,12 @@
+description: 'Repository and backlog owner: triages issues with repro and severity, reviews pushes, and ships every visible change with a real screenshot or generated hero card so the repo looks as good as it works.'
+description_auto: false
+display_name: GitHub Manager
+ui_meta:
+  hermes-bots:
+    title: GitHub Manager
+    description: 'Backlog + repo face: reproduces issues, labels by severity, and never pushes a visible change without a regenerated hero card or dashboard screenshot committed alongside it.'
+    color: '#24292F'
+    shape: 'blobatar::capsule'
+    pinned: true
+    custom: true
+    created: 1793508420000

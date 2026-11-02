@@ -1,5 +1,7 @@
 # Hermes Bots
 
+![Hermes Bots — a reviewer-gated agent crew](assets/hero.png)
+
 A small crew of specialist AI agents for [Hermes Agent](https://hermes-agent.nousresearch.com/docs), built around one rule:
 
 > **Nothing ships unreviewed.**
@@ -15,6 +17,7 @@ Most agent setups use one model that plans, executes, and grades its own homewor
 | **Researcher** | Live, sourced briefs with pros, cons, alternatives and dated citations. |
 | **Code Writer** | Code that runs: smallest correct change, real tests, quoted output. |
 | **3D Designer** | Parametric CAD → watertight STL with measured dimensions and a print plan. |
+| **GitHub Manager** | Backlog and repo face: reproduces issues, labels by severity, reviews pushes, and ships a regenerated screenshot or hero card with every visible change. |
 
 ## The loop
 
@@ -68,6 +71,21 @@ Two rules keep a gate from turning into a research project:
 
 - **Artifact first.** A written verdict at five minutes beats a perfect one that never lands. (Observed: an unbounded reviewer spent 9+ minutes building a scratch Postgres to test a plan's lock behaviour and never wrote the file.)
 - **Never run the plan to review it.** The moment a reviewer starts provisioning infrastructure to check a premise, it has become a co-author with no reviewer left in the room. One three-minute experiment, after the artifact exists, is the whole allowance.
+
+## Visuals — the repo face is part of the deliverable
+
+A repo is judged in three seconds, and a wall of text loses that vote. The `github-manager` bot enforces the same rule this repo follows: **any push that changes something visible ships a regenerated image in the same commit.**
+
+```bash
+node tools/hero.mjs --config tools/hero.json --out assets/hero.png      # 1280x640 repo card
+node tools/shot.mjs --url http://localhost:8321 --out assets/dash.png   # real dashboard capture
+node tools/shot.mjs --html docs/mock.html --out assets/preview.png      # local HTML
+```
+
+- Both tools render through headless Chromium. They resolve Playwright from `PLAYWRIGHT_PATH`, `./node_modules`, or your `$HOME/<project>/node_modules` via `PW_HINTS` — no dependency is installed by this repo.
+- Hero specs live in `tools/hero.json` (title, subtitle, chips, verdict tokens, accent colours, footer). Edit the JSON, re-run, commit the PNG.
+- Budget: hero 1280×640, screenshots 1440×900+, under ~400 KB each, alt text mandatory.
+- Rule of thumb: **a real screenshot beats a generated card**; use the card only when there is no UI to capture.
 
 ## Install
 
@@ -167,6 +185,9 @@ docs/LOCAL.md.example       your-facts template (copy into a profile, never comm
 examples/sample-run.md      one full gated run, verdicts and all
 install.py                  profile installer (clone → copy → optional model pin)
 scripts/redact-check.sh     scans for leaked personal identifiers before you push
+tools/hero.mjs              renders the repo hero card to PNG via headless Chromium
+tools/shot.mjs              screenshots a running dashboard or a local HTML file
+AGENTS.md                   repo rules every agent obeys: visuals, redaction, commits
 ```
 
 ## Extending the crew
