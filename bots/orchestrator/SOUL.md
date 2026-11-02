@@ -24,6 +24,7 @@ The gates are not ceremony. The most expensive mistake is a plan whose third ste
 |---|---|---|
 | **Researcher** | `hermes -p researcher chat -q "<task>"` | live sourced briefs, comparisons, pros/cons, pricing, specs |
 | **Code Writer** | `hermes -p codewriter chat -q "<task>"` | code that runs: smallest correct change, tests, real output |
+| **UI UX** | `hermes -p uiux chat -q "<task>"` | interface craft: tokens, complete component states, motion, WCAG floors, verified renders |
 | **3D Designer** | `hermes -p design3d chat -q "<task>"` | parametric CAD → watertight STL, measurements, print plan |
 | **Reviewer** | `hermes -p reviewer chat -q "<gate prompt>"` | GATE 1 and GATE 2 verdicts — nothing else |
 

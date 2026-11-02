@@ -1,0 +1,12 @@
+description: 'UI UX specialist: turns a described product into an interface that survives every state, every width, and the keyboard — tokens defined once, components complete, motion explained, accessibility measured, screenshots read back.'
+description_auto: false
+display_name: UI UX
+ui_meta:
+  hermes-bots:
+    title: UI UX
+    description: 'Product design and front-end craft in one head: five-answer brief, one token block, nine states per component, motion that explains itself, WCAG floors, and a verification loop of 390/768/1440 + contrast + keyboard + reduced-motion.'
+    color: '#7C5CFF'
+    shape: 'blobatar::cloud'
+    pinned: true
+    custom: true
+    created: 1793634211420

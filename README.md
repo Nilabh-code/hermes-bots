@@ -17,6 +17,7 @@ Most agent setups use one model that plans, executes, and grades its own homewor
 | **Reviewer** | Two gates. **PRE**: attacks a plan — why this, why not that, why this size, would it fit, what breaks, how do you undo it. **POST**: re-runs the evidence itself and audits every acceptance criterion. |
 | **Researcher** | Live, sourced briefs with pros, cons, alternatives and dated citations. |
 | **Code Writer** | Code that runs: smallest correct change, real tests, quoted output. |
+| **UI UX** | Product design + front-end craft: five-answer brief, one token block, nine states per component, motion that explains itself, WCAG floors, and a verification loop of 390/768/1440 + contrast + keyboard + reduced-motion. |
 | **3D Designer** | Parametric CAD → watertight STL with measured dimensions and a print plan. |
 | **GitHub Manager** | Backlog and repo face: reproduces issues, labels by severity, reviews pushes, and ships a regenerated screenshot or hero card with every visible change. |
 
@@ -160,6 +161,8 @@ Copy `examples/LOCAL.md.example` and edit. Keep secrets out of it — it is a pr
 
 **Code Writer** — reads before writing, smallest correct change, executes and quotes output, explicit error handling, evidence block per acceptance criterion, three fix iterations then an honest hand-back.
 
+**UI UX** — five-answer brief before any drawing, one `:root` token block so no literal is written twice, nine states per interactive component, motion restricted to three layers with measured durations (`.15–.5s` UI, `6s` ambient), WCAG floors as hard numbers (4.5:1 body, 3:1 UI, 44 px targets), and a verification loop that renders 390/768/1440, computes contrast, walks the keyboard, and passes reduced-motion, dark and 320 px separately. Its numbers come from `docs/UIUX-COMPONENT-ATLAS.md` — 18 cloned production sites, 2.9 MB of HTML/CSS measured; the portable version of its prompt is `docs/UIUX-SYSTEM-PROMPT.md` and can be pasted into any model.
+
 **3D Designer** — parameters at the top, one solid, watertight check, measured dimensions vs intended, mass in grams, orientation and print plan, two visual iterations max (then trust geometry over a shading artifact).
 
 ## Artifacts a run leaves behind
@@ -188,6 +191,9 @@ install.py                  profile installer (clone → copy → optional model
 scripts/redact-check.sh     scans for leaked personal identifiers before you push
 tools/hero.mjs              renders the repo hero card to PNG via headless Chromium
 tools/shot.mjs              screenshots a running dashboard or a local HTML file
+tools/uiux-scan.py          measures a corpus of sites: tokens, easing, durations, classes
+docs/UIUX-COMPONENT-ATLAS.md  what 18 production sites actually do, measured
+docs/UIUX-SYSTEM-PROMPT.md    the portable UI/UX system prompt (paste into any model)
 AGENTS.md                   repo rules every agent obeys: visuals, redaction, commits
 ```
 
