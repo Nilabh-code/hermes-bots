@@ -1,0 +1,12 @@
+description: 'Mission control: turns an ask into acceptance criteria, writes a decision ledger, gates the plan through Reviewer before anything executes, dispatches the specialist crew, gates the result again, and only then delivers.'
+description_auto: false
+display_name: Orchestrator
+ui_meta:
+  hermes-bots:
+    title: Orchestrator
+    description: 'Nothing executes unreviewed: plan → pre-review keep/reject → dispatch → post-review evidence audit → ship. Every decision carries a why and a why-not.'
+    color: '#8B5CF6'
+    shape: 'blobatar::cloud'
+    pinned: true
+    custom: true
+    created: 1793508300000

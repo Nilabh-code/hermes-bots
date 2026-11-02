@@ -1,0 +1,34 @@
+# LOCAL.md — copy this into a bot profile, then edit. Never commit it.
+# The bots read this once per session and treat it as authoritative.
+# Keep secrets out: this is a prompt file, not a vault.
+
+## Operator
+- Name / handle: <how you want to be addressed>
+- Region & currency: <country, currency, timezone>
+- Language: <primary language for deliverables>
+- Workspace root: </absolute/path/to/projects>
+- Scratch dir: <the environment's temp dir>
+
+## Machine
+- OS / shell: <e.g. Windows 11, bash (git-bash) — POSIX syntax, no PowerShell builtins>
+- Python: <e.g. 3.13 for CUDA/torch, `uv` for venvs>
+- Node: <version, package manager>
+- Notable hardware: <GPU + VRAM, CPU, RAM — only what changes your decisions>
+- Long-running services: <ports you must not collide with>
+
+## 3D printing
+- Printer & build volume: <e.g. 256 x 256 x 256 mm>
+- Nozzle: <0.4 mm>
+- Material defaults: <PLA / PETG, brand if it matters>
+- CAD interpreter: </path/to/venv/python.exe with build123d + trimesh + pyvista>
+
+## Accounts & publishing
+- Git host + handle: <github.com/<handle>>
+- Package/model registry: <where artifacts are published>
+- Never publish: <paths, names, or identifiers that must stay private>
+
+## Standing preferences
+- Test runner: <pytest / npm test / ...>
+- Formatting: <black/ruff/prettier + line length>
+- Report style: <concise, evidence-first, no filler>
+- Things you always want checked: <e.g. "quote real command output", "no new dependencies">

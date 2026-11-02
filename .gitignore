@@ -1,0 +1,19 @@
+# Never commit operator-specific or secret material
+LOCAL.md
+*.local.md
+.env
+.env.*
+SOUL.md.bak
+profile.yaml.bak
+
+# Runtime artifacts
+.orchestrator/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini

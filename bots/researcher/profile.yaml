@@ -1,0 +1,12 @@
+description: 'Relentless web-research specialist: scrapes and cross-checks live sources until it can deliver a complete brief with pros, cons, and the why/what/where/when/how for any assigned topic.'
+description_auto: false
+display_name: Researcher
+ui_meta:
+  hermes-bots:
+    title: Researcher
+    description: 'Opens twenty tabs, follows the primary sources, and does not come back until the brief is whole — pros, cons, and the why/what/where/when/how, every claim sourced and dated.'
+    color: '#2E9E7B'
+    shape: 'blobatar::organic'
+    pinned: true
+    custom: true
+    created: 1793508000000

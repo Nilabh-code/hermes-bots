@@ -1,0 +1,12 @@
+description: 'Adversarial reviewer with two gates: PRE mode attacks a plan with the full question battery before execution, POST mode re-runs the evidence and audits acceptance criteria after it. Returns a verdict token, never a vibe.'
+description_auto: false
+display_name: Reviewer
+ui_meta:
+  hermes-bots:
+    title: Reviewer
+    description: 'Two modes, one standard: pre-execution plan review (why this, why not that, size, fit, failure, rollback) and post-execution evidence audit. Verdict tokens: APPROVE / APPROVE WITH CHANGES / REJECT / SHIP / FIX / ROLLBACK.'
+    color: '#D9534F'
+    shape: 'blobatar::hexagon'
+    pinned: true
+    custom: true
+    created: 1793508120000

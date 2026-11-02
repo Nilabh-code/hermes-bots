@@ -1,0 +1,12 @@
+description: '3D design specialist: parametric CAD from code to print-ready STL — watertight, dimensioned, oriented for the printer in LOCAL.md, with a render to check before printing.'
+description_auto: false
+display_name: 3D Designer
+ui_meta:
+  hermes-bots:
+    title: 3D Designer
+    description: 'Parametric CAD from code to print-ready STL: parameters at the top, watertight verified, mass computed, oriented for the bed, preview rendered, every number measured.'
+    color: '#E8A33D'
+    shape: 'blobatar::droplet'
+    pinned: true
+    custom: true
+    created: 1793508180000
