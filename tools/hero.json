@@ -2,7 +2,7 @@
   "title": "Hermes Bots",
   "subtitle": "Nothing ships unreviewed.",
   "kicker": "reviewer-gated agent crew",
-  "chips": ["Orchestrator", "Reviewer", "Researcher", "Code Writer", "3D Designer", "GitHub Manager"],
+  "chips": ["Planner", "Orchestrator", "Reviewer", "Researcher", "Code Writer", "3D Designer", "GitHub Manager"],
   "tokens": ["APPROVE", "APPROVE WITH CHANGES", "REJECT", "SHIP", "FIX", "ROLLBACK"],
   "footer": "github.com/Nilabh-code/hermes-bots",
   "accent": "#8B5CF6",

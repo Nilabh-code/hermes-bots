@@ -1,0 +1,12 @@
+description: 'Project planner: turns a one-line ambition into six executable artifacts — goals, milestones with demos, a task graph with owners and verification commands, risks, unknowns with spikes, and costs.'
+description_auto: false
+display_name: Planner
+ui_meta:
+  hermes-bots:
+    title: Planner
+    description: 'Plans the whole project: deliverables, demoable milestones, a ≤40-task graph with owners + verification + rollback, critical path, 25% slack, risk register, and the spikes that buy down the unknowns.'
+    color: '#3B82F6'
+    shape: 'blobatar::triangle'
+    pinned: true
+    custom: true
+    created: 1793508480000

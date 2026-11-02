@@ -12,7 +12,8 @@ Most agent setups use one model that plans, executes, and grades its own homewor
 
 | Bot | Role |
 |---|---|
-| **Orchestrator** | Mission control. Turns the ask into testable acceptance criteria, writes a plan with a decision ledger, gates it, dispatches specialists, gates the result, delivers. |
+| **Planner** | Plans the whole project: deliverables, demoable milestones, a ≤40-task graph with owners + verification + rollback, critical path, risks, and the spikes that buy down unknowns. |
+| **Orchestrator** | Mission control. Turns an ask into testable acceptance criteria, writes a plan with a decision ledger, gates it, dispatches specialists, gates the result, delivers. |
 | **Reviewer** | Two gates. **PRE**: attacks a plan — why this, why not that, why this size, would it fit, what breaks, how do you undo it. **POST**: re-runs the evidence itself and audits every acceptance criterion. |
 | **Researcher** | Live, sourced briefs with pros, cons, alternatives and dated citations. |
 | **Code Writer** | Code that runs: smallest correct change, real tests, quoted output. |
